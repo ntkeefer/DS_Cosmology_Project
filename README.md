@@ -141,11 +141,11 @@ show/hide:
 The goals of the EDA that we ran were as follows:
 
 - Describe the distribution of each variable in our datasets, including searching for the presence of outliers.
-- Calculate the velocity, flux, and distance for each astronomical object. Please see SketchAnalysis
+- Calculate the velocity, flux, and distance for each astronomical object. Please see [Sketch_Analysis_Equations](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/Sketch_Analysis_Equations.ipynb) for more details.
 - Obtain an estimate for the Hubble Constant <img src="https://render.githubusercontent.com/render/math?math=H_{o}">, the rate of expansion of the universe.
 - Determine whether increased amounts of data leads to more accurate results in order to decide if error comes from lack of complete data or problems in methodology.
 
-By looking at the output of sns.pairplot on our data, we were able to discover that each variable behaves reasonably close to the way we expected them to, from our prior knowledge of physics. There are more objects in our data that are close to us than far away. Magnitudes for each band of light usually fall into two bunches: one for galaxies and one for quasars, as expected.
+By looking at the output of sns.pairplot on our data, we were able to discover that each variable behaves reasonably close to the way we expected them to (from our prior knowledge of physics). There are more objects in our data that are close to us than far away. Magnitudes for each band of light usually fall into two bunches: one for galaxies and one for quasars, as expected.
 
 We also were able to identify the presence of several outlier values in our data, which we later dealt with by cutting off values that fell outside of specific ranges for each variable.
 
@@ -160,7 +160,7 @@ show/hide:
 <details>
   <summary>Click to expand!</summary>
 
-We completed the calculations for velocity, flux, and distance after observing that the trends in our data are reasonably close to our expectations. You can see how these columns are calculated by referencing [Project_Milestone.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/Project_Milestone.ipynb).
+We completed the calculations for velocity, flux, and distance after observing that the trends in our data are reasonably close to our expectations. You can see how these columns are calculated by referencing [Sketch_Analysis_](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/Sketch_Analysis_Equations.ipynb).
 
 Upon inspection, we discovered that the relationship between distance and velocity was not linear, as we had expected, but logarithmic. After putting our heads together, we reasoned that this comes from our "standard candle" assumption for luminosity! Since these luminosity values typically vary in a logarithmic fashion, we introduce a logarithmic error when we assume them to "average out" to a flat value.
 
