@@ -13,10 +13,25 @@ show/hide:
      * With some
      * Sub bullets
 
-* Grab link from each section of readme [here]().
-* Link to "Exploratory Data Analysis" section below [here]().
-* Link to "Project Milestone" section below [here]().
-* Link to "Models" section below [here]().
+
+* [Intro and Problem](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/README.md#introduction-and-problem)
+
+* [Jupyter Notebooks](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/README.md#jupyter-notebooks)
+
+* [Project Overview](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/README.md#project-overview)
+
+* [Summary of Algorithm Performance](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/README.md#summary-table-of-algorithm-performance)
+
+* [Data Overview](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/README.md#data-overview)
+
+* [EDA & Regression](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/README.md#exploratory-data-analysis--ols-regression)
+
+* [Regression Analysis](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/README.md#regression-analysis-part-i)
+
+* [Clustering & Classification](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/README.md#predictive-modeling-and-analysis-part-ii--iii)
+
+* [Conclusion](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/README.md#conclusion)
+
 </details>
 
 ## Introduction and Problem
