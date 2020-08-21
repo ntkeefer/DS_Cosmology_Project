@@ -59,7 +59,7 @@ Expansion of the Universe [(Link)](https://upload.wikimedia.org/wikipedia/common
 
 * [Data_Cleaning.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/Data_Cleaning.ipynb) (Initial data preparation)
 
-* [EDA.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/EDA.ipynb) (Exploratory Data Analysis and more data preparation)c
+* [EDA_Regression.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/EDA_Regression.ipynb)
 
 * [Models.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/Models.ipynb) (Part II & III: Clustering and Classification)
 
@@ -170,7 +170,7 @@ Finally, after running all of our data through linear regressions for "velocity 
 
 It is important to note that increasing the size of the dataset from 7k, to 14k, then 21k and 28k neither increased R Squared nor improved the accuracy of our Hubble Parameter. We conclude that the reason we aren't getting 72 as our value isn't because of incomplete data, but rather problems with methodology.
 
-You can reference [EDA.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/EDA.ipynb) to see this in action. We simplified many of the original "for" loops that processed all of our data down to single examples for ease of readability and processing speed.
+You can reference [EDA_Regression.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/EDA_Regression.ipynb) to see this in action. We simplified many of the original "for" loops that processed all of our data down to single examples for ease of readability and processing speed.
 
 </details>
 
