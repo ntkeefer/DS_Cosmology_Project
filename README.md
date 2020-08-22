@@ -6,13 +6,6 @@ By Kian Malone, Nicky Keefer, and Joey DiConza
 show/hide:
 <details>
   <summary>Click to expand!</summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
-
 
 * [Intro and Problem](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/README.md#introduction-and-problem)
 
@@ -74,7 +67,7 @@ Expansion of the Universe [(Link)](https://upload.wikimedia.org/wikipedia/common
 
 * [Data_Cleaning.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/Data_Cleaning.ipynb) (Initial data preparation)
 
-* [EDA_Regression.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/EDA_Regression.ipynb)
+* [EDA_Regression.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/EDA_Regression.ipynb) (EDA and Part I: Regression)
 
 * [Models.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/Models.ipynb) (Part II & III: Clustering and Classification)
 
