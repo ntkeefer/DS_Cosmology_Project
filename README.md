@@ -155,9 +155,18 @@ The goals of the EDA that we ran were as follows:
 
 By looking at the output of sns.pairplot on our data, we were able to discover that each variable behaves reasonably close to the way we expected them to (from our prior knowledge of physics). There are more objects in our data that are close to us than far away. Magnitudes for each band of light usually fall into two bunches: one for galaxies and one for quasars, as expected.
 
-We also were able to identify the presence of several outlier values in our data, which we later dealt with by cutting off values that fell outside of specific ranges for each variable.
+<p align="center"> 
+![SnsPairPlot](https://user-images.githubusercontent.com/42389358/90967493-2e89c280-e49d-11ea-93d3-5c0555079bb2.jpg)
+</p>
 
-The most important discovery was that Quasars are extremely erratic. The values for their magnitudes and redshifts are often point clouds or fan out to extreme values. We decided that for the purposes of caluclating the Hubble Parameter, we would leave quasars out. Indeed, when we ran regressions on "velocity~distance" for quasars, the average R Squared value was .08, which means only 8% of the variance between velocity and distance is explained by that linear model. That result is not nearly satisfactory when we expected to see a near-perfect line there.
+We also were able to identify the presence of several outliers in our data, which we later dealt with by cutting off values that fell outside of specific ranges for each variable.
+
+The most important discovery was that Quasars are extremely erratic. The values for their magnitudes and redshifts are often point clouds or fan out to extreme values. We decided that for the purposes of caluclating the Hubble Constant, we would leave quasars out. Indeed, when we ran regressions on "velocity~distance" for quasars, the average R Squared value was .08, which means only 8% of the variance between velocity and distance is explained by that linear model. That result is not nearly satisfactory when we expected to see a near-perfect line there.
+
+<p align="center"> 
+![OLS Hubble(Log of distance)](https://user-images.githubusercontent.com/42389358/90967491-2df12c00-e49d-11ea-8779-02d6ad911418.png)
+</p>
+
 
 Another important discovery was that the magnitude of the green band had a closer relationship with velocity than the magnitude of the red band. We changed our original plans to use the green band in our distance calculations for this reason.
 </details>
@@ -168,15 +177,19 @@ show/hide:
 <details>
   <summary>Click to expand!</summary>
 
-We completed the calculations for velocity, flux, and distance after observing that the trends in our data are reasonably close to our expectations. You can see how these columns are calculated by referencing [Sketch_Analysis_](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/Sketch_Analysis_Equations.ipynb).
+We completed the calculations for velocity, flux, and distance after observing that the trends in our data are reasonably close to our expectations. You can see how these columns are calculated by referencing [Sketch_Analysis_Equations](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/Sketch_Analysis_Equations.ipynb).
 
 Upon inspection, we discovered that the relationship between distance and velocity was not linear, as we had expected, but logarithmic. After putting our heads together, we reasoned that this comes from our "standard candle" assumption for luminosity! Since these luminosity values typically vary in a logarithmic fashion, we introduce a logarithmic error when we assume them to "average out" to a flat value.
 
+<p align="center"> 
+![DistVeloGalaxy2](https://user-images.githubusercontent.com/42389358/90967488-2af63b80-e49d-11ea-974d-bfd0213e5b37.jpg)
+</p>
+
 In order to combat this, we decided to regress on the log of distance, rather than just distance, in order to calculate the Hubble Parameter. This indeed achieved a more precise result, with R-Squared values trending from about .7 to .85 after making this correction.
 
-Finally, after running all of our data through linear regressions for "velocity ~ distance", and after weighting each result appropriately for the size of each dataset, we obtained an expetimental value for the Hubble Parameter of 43.57285 km/s*mpc. We are pleased with this result, as it is well within an order of magnitude of the "actual" value of roughly 68-72 determined by modern physicists.
+Finally, after running all of our data through linear regressions for "velocity ~ distance", and after weighting each result appropriately for the size of each dataset, we obtained an expetimental value for the Hubble Parameter of 43.57285 km/sMpc. We are pleased with this result, as it is well within an order of magnitude of the "actual" value of roughly 68-72 determined by modern physicists.
 
-It is important to note that increasing the size of the dataset from 7k, to 14k, then 21k and 28k neither increased R Squared nor improved the accuracy of our Hubble Parameter. We conclude that the reason we aren't getting 72 as our value isn't because of incomplete data, but rather problems with methodology.
+It is important to note that increasing the size of the dataset from 7k, to 14k, then 21k and 28k neither increased R-Squared nor improved the accuracy of our Hubble Parameter. We conclude that the reason we aren't getting 72 as our value isn't because of incomplete data, but rather problems with methodology.
 
 You can reference [EDA_Regression.ipynb](https://github.com/ntkeefer/DS_Cosmology_Project/blob/master/EDA_Regression.ipynb) to see this in action. We simplified many of the original "for" loops that processed all of our data down to single examples for ease of readability and processing speed.
 
@@ -196,11 +209,30 @@ On the first night of looping, the desktop we were running calculations on shut 
 
 For Part II, the star performer of our models was the k-Means clustering model. If you compare its plot to the graph on the wikipedia page for the galaxy color-magnitude diagram, you will see a close resemblence. We had the advantage of knowing that our data should contain 3 clusters: one red, one green, and one blue. Because of this, the choice for k=3 was obvious and lead to seemingly perfect results. Check out the notebook to see this!
 
+<p align="center"> 
+![KmeansGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90967489-2c276880-e49d-11ea-8fc6-cd72afdf4e20.png)
+</p>
+
+
 The DBSCAN model performed poorly on our dataset. When cross-validated between the datasets, the model was rarely able to pick out three distinct color clumps. Often the whole dataset would be one cluster, or the model would distinguish only the main group of galaxies from those with extreme values. We believe that this is due to our data being somewhat "smudged together," with no cluster being completely seperate from another. We suspect that the epsilon value required to detect the appropriate clusters with a DBSCAN model is probably so precise that our discrete "for" loops can't locate it.
 
-For Part III, we referenced the results of our Exploratory Data Analysis to include redshift, green apparent magnitude, red apparent magnitude, and absolute magnitude in our models.
+<p align="center"> 
+![DBSCANGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90967486-229e0080-e49d-11ea-9bc3-5da99069138b.png)
+</p>
+
+
+For Part III, we referenced the results of our EDA to include redshift, green apparent magnitude, red apparent magnitude, and absolute magnitude in our models.
 
 Our final support vector machine (SVM) model was able to correctly classify an object as a galaxy or quasar 98.3% of the time on test sets! Despite the data being sort of "mixed together" within the green valley of the color-magnitude diagram, the SVM classifier was still able to correctly determine whether the object was a quasar or a galaxy 98% of the time. Our k-Nearest Neighbors model performed almost as well, with an average 98.2% success rate among the test sets.
+
+<p align="center"> 
+![SVMGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90967494-2e89c280-e49d-11ea-9231-0794a8158fdb.png)
+</p>
+
+<p align="center"> 
+![KNNGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90967490-2d589580-e49d-11ea-9429-d8e382e9656c.png)
+</p>
+
 </details>
 
 ## Conclusion
