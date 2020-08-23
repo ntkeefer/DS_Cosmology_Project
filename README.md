@@ -157,7 +157,7 @@ By looking at the output of sns.pairplot on our data, we were able to discover t
 
 <p align="center"> 
   
-![SnsPairPlot](https://user-images.githubusercontent.com/42389358/90967493-2e89c280-e49d-11ea-93d3-5c0555079bb2.jpg)
+![SnsPairPlot](https://user-images.githubusercontent.com/42389358/90968306-00f64680-e4a8-11ea-909b-d98d71e7c168.png)
 
 </p>
 
@@ -167,7 +167,7 @@ The most important discovery was that Quasars are extremely erratic. The values 
 
 <p align="center"> 
 
-![OLS Hubble(Log of distance)](https://user-images.githubusercontent.com/42389358/90967491-2df12c00-e49d-11ea-8779-02d6ad911418.png)
+<img width="542" alt="OLS Log of distance" src="https://user-images.githubusercontent.com/42389358/90968304-005db000-e4a8-11ea-855a-4d7b4a5d6a78.png">
 
 </p>
 
@@ -186,7 +186,7 @@ Upon inspection, we discovered that the relationship between distance and veloci
 
 <p align="center"> 
 
-![DistVeloGalaxy2](https://user-images.githubusercontent.com/42389358/90967488-2af63b80-e49d-11ea-974d-bfd0213e5b37.jpg)
+![DistVeloGalaxy2](https://user-images.githubusercontent.com/42389358/90968301-fe93ec80-e4a7-11ea-948f-7aff4f8727f5.jpg)
 
 </p>
 
@@ -216,7 +216,7 @@ For Part II, the star performer of our models was the k-Means clustering model. 
 
 <p align="center"> 
   
-![KmeansGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90967489-2c276880-e49d-11ea-8fc6-cd72afdf4e20.png)
+![KmeansGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90968302-ff2c8300-e4a7-11ea-9c7d-7decbd03618c.png)
 
 </p>
 
@@ -226,7 +226,7 @@ The DBSCAN model performed poorly on our dataset. When cross-validated between t
 
 <p align="center"> 
   
-![DBSCANGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90967486-229e0080-e49d-11ea-9bc3-5da99069138b.png)
+![DBSCANGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90968300-fb98fc00-e4a7-11ea-97a3-f5538c133821.png)
 
 </p>
 
@@ -237,13 +237,13 @@ Our final support vector machine (SVM) model was able to correctly classify an o
 
 <p align="center">
   
-![SVMGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90967494-2e89c280-e49d-11ea-9231-0794a8158fdb.png)
+![SVMGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90968307-02277380-e4a8-11ea-8940-a38c5bfd5749.png)
 
 </p>
 
 <p align="center"> 
   
-![KNNGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90967490-2d589580-e49d-11ea-9429-d8e382e9656c.png)
+![KNNGalaxyColorMagDiagram](https://user-images.githubusercontent.com/42389358/90968303-ffc51980-e4a7-11ea-84a5-7e6fc4bd90a7.png)
 
 </p>
 
