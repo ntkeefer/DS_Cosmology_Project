@@ -165,11 +165,6 @@ We also were able to identify the presence of several outliers in our data, whic
 
 The most important discovery was that Quasars are extremely erratic. The values for their magnitudes and redshifts are often point clouds or fan out to extreme values. We decided that for the purposes of caluclating the Hubble Constant, we would leave quasars out. Indeed, when we ran regressions on "velocity~distance" for quasars, the average R Squared value was .08, which means only 8% of the variance between velocity and distance is explained by that linear model. That result is not nearly satisfactory when we expected to see a near-perfect line there.
 
-<p align="center"> 
-
-<img width="542" alt="OLS Log of distance" src="https://user-images.githubusercontent.com/42389358/90968304-005db000-e4a8-11ea-855a-4d7b4a5d6a78.png">
-
-</p>
 
 Another important discovery was that the magnitude of the green band had a closer relationship with velocity than the magnitude of the red band. We changed our original plans to use the green band in our distance calculations for this reason.
 </details>
@@ -191,6 +186,12 @@ Upon inspection, we discovered that the relationship between distance and veloci
 </p>
 
 In order to combat this, we decided to regress on the log of distance, rather than just distance, in order to calculate the Hubble Parameter. This indeed achieved a more precise result, with R-Squared values trending from about .7 to .85 after making this correction.
+
+<p align="center"> 
+
+<img width="542" alt="OLS Log of distance" src="https://user-images.githubusercontent.com/42389358/90968304-005db000-e4a8-11ea-855a-4d7b4a5d6a78.png">
+
+</p>
 
 Finally, after running all of our data through linear regressions for "velocity ~ distance", and after weighting each result appropriately for the size of each dataset, we obtained an expetimental value for the Hubble Parameter of 43.57285 km/sMpc. We are pleased with this result, as it is well within an order of magnitude of the "actual" value of roughly 68-72 determined by modern physicists.
 
