@@ -89,10 +89,11 @@ For *Part III*, we created a classifier to determine whether an astronomical obj
 ## Algorithms for Part II and III:
 We tested two different models for each task. For clustering, we chose to use a K-Means model and a DBSCAN model. For classifying, we used a Support Vector Machine and a K-Nearest Neighbors classifier. We wanted two different methods for each task in order to gauge the relative strength of each method.
 
-## Summary/ Table of algorithm performance
+## Summary table of algorithm performance
 
-Header1 | Header2 | Header3
---------|---------|--------
+|Regression: log(distance) vs. velocity | Classification |
+|:-------------------------------------:|:--------------:|
+|<img src="https://render.githubusercontent.com/render/math?math=R^{2} = 0.856"height="50" width="500">|<img src="https://render.githubusercontent.com/render/math?math=R^{2} = 0.856"height="50" width="500"> 
 
 
 
