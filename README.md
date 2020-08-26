@@ -93,7 +93,7 @@ We tested two different models for each task. For clustering, we chose to use a 
 
 |Regression: log(distance) vs. velocity | Classification |
 |:-------------------------------------:|:--------------:|
-|<img src="https://render.githubusercontent.com/render/math?math=R^{2} = 0.856"height="50" width="500">|<img src="https://render.githubusercontent.com/render/math?math=R^{2} = 0.856"height="50" width="500"> 
+|<img src="https://latex.codecogs.com/svg.latex?\Large&space;R^{2} = 0.856" title="R^{2} = 0.856" />|<img src="https://latex.codecogs.com/svg.latex?\Large&space;R^{2} = 0.856" title="R^{2} = 0.856" />|
 
 
 
