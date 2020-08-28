@@ -95,16 +95,22 @@ We tested two different models for each task. For clustering, we chose to use a 
 
 ## Summary table of model performance
 
+<p align="center"> 
+
 ### Supervised Learning
 |Regression: log(distance) vs. velocity | Classification: SVM | Classification: KNN |
 |:-------------------------------------:|:-------------------:|:-------------------:|
-|<img src="https://latex.codecogs.com/svg.latex?\Large&space;R^{2}=0.856" title="R^{2}=0.856" />|<img src="https://latex.codecogs.com/svg.latex?\Large&space;Accuracy = 98.3%" title="Accuracy = 98.3%" /> | <img src="https://latex.codecogs.com/svg.latex?\Large&space;Accuracy = 98.2%" title="Accuracy = 98.2%" /> |
+|<img src="https://latex.codecogs.com/svg.latex?\Large&space;R^{2}=0.856" title="R^{2}=0.856" />| Accuracy = 98.3% | Accuracy = 98.2%|
+ </p>
+
+<p align="center"> 
 
 ### Unsupervised Learning
 |Clustering: K-Means(Loyds Alg.) | Clustering: DBSCAN |
 |:-------------------------------------:|:--------------:|
 |<img src="https://latex.codecogs.com/svg.latex?\Large&space;silhouette score = 0.62" title="silhouette score = 0.62" />|<img src="https://latex.codecogs.com/svg.latex?\Large&space;silhouette score = -0.36" title="silhouette score = -0.36" />|
 
+  </p>
 
 
 ## Data Overview
