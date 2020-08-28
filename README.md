@@ -84,16 +84,26 @@ Expansion of the Universe [(Link)](https://upload.wikimedia.org/wikipedia/common
 For *Part II*, we reasoned that we had enough data to create a clustering model to allow a computer to distinguish "red" galaxies from "green"/ "blue" galaxies. You can read more about this on [Wikipedia](https://en.wikipedia.org/wiki/Galaxy_color%E2%80%93magnitude_diagram)
 
 3. Classifier:
-For *Part III*, we created a classifier to determine whether an astronomical object is a Quasar, or just a normal galaxy. For a fascinating description of what a Quasar is, check out [PBS Space Time's video](https://www.youtube.com/watch?v=3TZEp_n3eIc)
+For *Part III*, we created a classifier to determine whether a galaxy was Red or Blue. Please see this [wikipedia page](https://en.wikipedia.org/wiki/Galaxy_color%E2%80%93magnitude_diagram) to understand the plots. 
+
+**One special note: In between the blue and red galaxy distributions is an underpopulated space known as the green valley which includes a number of red spirals.**
+
+
 
 ## Algorithms for Part II and III:
 We tested two different models for each task. For clustering, we chose to use a K-Means model and a DBSCAN model. For classifying, we used a Support Vector Machine and a K-Nearest Neighbors classifier. We wanted two different methods for each task in order to gauge the relative strength of each method.
 
 ## Summary table of model performance
 
-|Regression: log(distance) vs. velocity | Classification |
+### Supervised Learning
+|Regression: log(distance) vs. velocity | Classification: SVM | Classification: KNN |
+|:-------------------------------------:|:-------------------:|:-------------------:|
+|<img src="https://latex.codecogs.com/svg.latex?\Large&space;R^{2}=0.856" title="R^{2}=0.856" />|<img src="https://latex.codecogs.com/svg.latex?\Large&space;Accuracy = 98.3%" title="Accuracy = 98.3%" /> | <img src="https://latex.codecogs.com/svg.latex?\Large&space;Accuracy = 98.2%" title="Accuracy = 98.2%" /> |
+
+### Unsupervised Learning
+|Clustering: K-Means(Loyds Alg.) | Clustering: DBSCAN |
 |:-------------------------------------:|:--------------:|
-|<img src="https://latex.codecogs.com/svg.latex?\Large&space;R^{2}=0.856" title="R^{2}=0.856" />|<img src="https://latex.codecogs.com/svg.latex?\Large&space;R^{2} = 0.856" title="R^{2} = 0.856" />|
+|<img src="https://latex.codecogs.com/svg.latex?\Large&space;silhouette score = 0.62" title="silhouette score = 0.62" />|<img src="https://latex.codecogs.com/svg.latex?\Large&space;silhouette score = -0.36" title="silhouette score = -0.36" />|
 
 
 
@@ -102,7 +112,7 @@ show/hide:
 <details>
   <summary>Click to expand!</summary>
   
-We acquired our raw data from the SLOAN DIGITAL SKY SURVEY (SDSS). At the SDSS website, they have a built-in SQL Query Request Tool. While this did make our life much easier, there were basic query limits of 500,000 rows and 10 minute time-out, thus we had to optimize our SQL queries in order to sumbit the following request to the SDSS database:
+We acquired our raw data from the SLOAN DIGITAL SKY SURVEY (SDSS). At the SDSS data access [website](https://www.sdss.org/dr15/data_access/), they have a built-in SQL Query Request Tool. While this did make our life much easier, there were basic query limits of 500,000 rows and 10 minute time-out, thus we had to optimize our SQL queries in order to sumbit the following request to the SDSS database:
 
 **SQL Query:**
 ```
